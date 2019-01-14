@@ -49,7 +49,7 @@ test('custom error', t => {
 
 test.only('cache based on input', t => {
   requireOneOf(['ava'])
-  t.true(!!requireOneOf.CACHE.ava)
+  t.true(!!requireOneOf.cache.ava)
   requireOneOf(['finepack', 'ava'])
-  t.true(!!requireOneOf.CACHE['finepack,ava'])
+  t.true(!!requireOneOf.cache['finepack,ava'])
 })

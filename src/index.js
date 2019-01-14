@@ -5,7 +5,7 @@ const assert = require('assert')
 
 const resolveCwd = resolveFrom.silent.bind(resolveFrom, process.cwd())
 
-const CACHE = {}
+const cache = {}
 
 const createError = modules =>
   new TypeError(
@@ -27,7 +27,7 @@ const find = (modules, error = createError) => {
 
 module.exports = (modules, fn) => {
   const key = modules.join(',')
-  return CACHE[key] || (CACHE[key] = find(modules, fn))
+  return cache[key] || (cache[key] = find(modules, fn))
 }
 
-module.exports.CACHE = CACHE
+module.exports.cache = cache
