@@ -1,16 +1,11 @@
 'use strict'
 
+const resolveFrom = require('resolve-from')
 const assert = require('assert')
 
-const CACHE = {}
+const resolveCwd = resolveFrom.silent.bind(resolveFrom, process.cwd())
 
-const load = module => {
-  try {
-    return require(module)
-  } catch (e) {
-    return null
-  }
-}
+const CACHE = {}
 
 const createError = modules =>
   new TypeError(
@@ -21,8 +16,12 @@ const createError = modules =>
 
 const find = (modules, error = createError) => {
   assert(Array.isArray(modules), 'Need to provide a collection')
-  const module = modules.find(load)
-  if (module) return module
+
+  for (const module of modules) {
+    const modulePath = resolveCwd(module)
+    if (modulePath) return require(modulePath)
+  }
+
   throw error(modules)
 }
 
