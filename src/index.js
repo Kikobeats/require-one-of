@@ -3,8 +3,6 @@
 const resolveFrom = require('resolve-from')
 const assert = require('assert')
 
-const resolveCwd = resolveFrom.silent.bind(resolveFrom, process.cwd())
-
 const cache = {}
 
 const createError = modules =>
@@ -18,7 +16,7 @@ const find = (modules, error = createError) => {
   assert(Array.isArray(modules), 'Need to provide a collection')
 
   for (const module of modules) {
-    const modulePath = resolveCwd(module)
+    const modulePath = resolveFrom.silent(process.cwd(), module)
     if (modulePath) return require(modulePath)
   }
 
