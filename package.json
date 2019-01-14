@@ -2,7 +2,7 @@
   "name": "require-one-of",
   "description": "Conditional require with fallback support",
   "homepage": "https://documentup.com/Kikobeats/require-one-of",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
