@@ -40,7 +40,7 @@ requireOneOf(['puppeteer', 'puppeteer-core'], modules => {
 
 ### requireOneOf(modules, [fn])
 
-#### input
+#### modules
 
 *Required*<br>
 Type: `array`
