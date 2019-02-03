@@ -23,6 +23,7 @@
     "require"
   ],
   "dependencies": {
+    "humanize-list": "~1.0.1",
     "import-from": "~2.1.0"
   },
   "devDependencies": {

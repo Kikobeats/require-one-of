@@ -7,7 +7,6 @@ test('need to pass an array', t => {
   const error = t.throws(() => {
     requireOneOf('one')
   })
-
   t.is(error.message, 'Need to provide a collection')
 })
 
@@ -29,7 +28,7 @@ test('more than one', t => {
 
   t.is(
     error.message,
-    "'one','two' not found as dependency. Please, install one of them."
+    "'one' and 'two' not found as dependency. Please, install one of them."
   )
 })
 
@@ -47,7 +46,7 @@ test('custom error', t => {
   t.is(error.message, "Uh, oh. 'one','two' not found on dependencies")
 })
 
-test.only('cache based on input', t => {
+test('cache based on input', t => {
   requireOneOf(['ava'])
   t.true(!!requireOneOf.cache.ava)
   requireOneOf(['finepack', 'ava'])
