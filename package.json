@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "humanize-list": "~1.0.1",
-    "import-from": "~2.1.0"
+    "resolve-from": "~4.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
