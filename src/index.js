@@ -8,9 +8,9 @@ const cache = {}
 
 const createError = modules =>
   new TypeError(
-    `${humanizeList(
-      modules.map(m => `'${m}'`)
-    )} not found as dependency. Please, install one of them.`
+    `${humanizeList(modules.map(m => `'${m}'`), {
+      conjunction: 'or'
+    })} not found as dependency. Please, install one of them.`
   )
 
 const find = (modules, error = createError) => {

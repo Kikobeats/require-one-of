@@ -28,7 +28,7 @@ test('more than one', t => {
 
   t.is(
     error.message,
-    "'one' and 'two' not found as dependency. Please, install one of them."
+    "'one' or 'two' not found as dependency. Please, install one of them."
   )
 })
 
