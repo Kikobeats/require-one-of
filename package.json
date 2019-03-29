@@ -23,6 +23,7 @@
     "require"
   ],
   "dependencies": {
+    "global-dirs": "~0.1.1",
     "humanize-list": "~1.0.1",
     "resolve-from": "~4.0.0"
   },

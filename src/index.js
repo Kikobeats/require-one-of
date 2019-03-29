@@ -1,7 +1,8 @@
 'use strict'
 
-const resolveFrom = require('resolve-from')
 const humanizeList = require('humanize-list')
+const resolveFrom = require('resolve-from')
+const globalDirs = require('global-dirs')
 const assert = require('assert')
 
 const cache = {}
@@ -15,7 +16,9 @@ const createError = modules =>
 
 const find = (modules, error = createError) => {
   for (const module of modules) {
-    const modulePath = resolveFrom.silent(process.cwd(), module)
+    const modulePath =
+      resolveFrom.silent(process.cwd(), module) ||
+      resolveFrom.silent(globalDirs.npm.packages, module)
     if (modulePath) return require(modulePath)
   }
 
