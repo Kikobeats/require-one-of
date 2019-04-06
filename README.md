@@ -21,10 +21,10 @@ $ npm install require-one-of --save
 const requireOneOf = require('require-one-of')
 
 // throw an error if `puppeteer` not found
-require(['puppeteer'])
+requireOneOf(['puppeteer'])
 
 // throw an error if `puppeteer` or `puppeteer-core` not found
-require(['puppeteer', 'puppeteer-core'])
+requireOneOf(['puppeteer', 'puppeteer-core'])
 
 // pass fn as second argument for setup custom error
 requireOneOf(['puppeteer', 'puppeteer-core'], modules => {
