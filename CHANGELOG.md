@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.11](https://github.com/Kikobeats/require-one-of/compare/v1.0.10...v1.0.11) (2019-06-19)
+
+
+### Build System
+
+* update meta ([8f8b3fd](https://github.com/Kikobeats/require-one-of/commit/8f8b3fd))
+* update travis ([d1984e6](https://github.com/Kikobeats/require-one-of/commit/d1984e6))
+
+
+
 ### [1.0.10](https://github.com/Kikobeats/require-one-of/compare/v1.0.9...v1.0.10) (2019-05-20)
 
 
