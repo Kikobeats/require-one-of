@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.13](https://github.com/Kikobeats/require-one-of/compare/v1.0.12...v1.0.13) (2019-09-24)
+
+
+### Bug Fixes
+
+* typo ([273c86c](https://github.com/Kikobeats/require-one-of/commit/273c86c))
+
 ### [1.0.12](https://github.com/Kikobeats/require-one-of/compare/v1.0.10...v1.0.12) (2019-09-20)
 
 
