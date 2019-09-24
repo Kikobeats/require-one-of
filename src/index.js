@@ -31,7 +31,7 @@ const resolveModule = module => {
 
   const relativeToPath = resolveFrom.silent(relativeNodeModulesPath, module)
   debug(` - ${module} at ${relativeNodeModulesPath} → ${!!relativeToPath}`)
-  if (relativeToProcess) return relativeToPath
+  if (relativeToPath) return relativeToPath
 
   return undefined
 }
