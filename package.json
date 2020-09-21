@@ -2,7 +2,7 @@
   "name": "require-one-of",
   "description": "Conditional require with fallback support",
   "homepage": "https://nicedoc.io/Kikobeats/require-one-of",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
