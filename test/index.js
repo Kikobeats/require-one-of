@@ -4,46 +4,54 @@ const test = require('ava')
 const requireOneOf = require('..')
 
 test('need to pass an array', t => {
-  const error = t.throws(() => {
-    requireOneOf('one')
-  })
-  t.is(error.message, 'Need to provide a collection')
+  t.throws(
+    () => {
+      requireOneOf('one')
+    },
+    {
+      message: 'Need to provide a collection'
+    }
+  )
 })
 
 test('one', t => {
-  const error = t.throws(() => {
-    requireOneOf(['one'])
-  }, TypeError)
-
-  t.is(
-    error.message,
-    "'one' not found as dependency. Please, install one of them."
+  t.throws(
+    () => {
+      requireOneOf(['one'])
+    },
+    {
+      instanceOf: TypeError,
+      message: "'one' not found as dependency. Please, install one of them."
+    }
   )
 })
 
 test('more than one', t => {
-  const error = t.throws(() => {
-    requireOneOf(['one', 'two'])
-  }, TypeError)
-
-  t.is(
-    error.message,
-    "'one' or 'two' not found as dependency. Please, install one of them."
+  t.throws(
+    () => {
+      requireOneOf(['one', 'two'])
+    },
+    {
+      instanceOf: TypeError,
+      message: "'one' or 'two' not found as dependency. Please, install one of them."
+    }
   )
 })
 
 test('custom error', t => {
-  const error = t.throws(() => {
-    requireOneOf(['one', 'two'], modules => {
-      return new TypeError(
-        `Uh, oh. ${modules
-          .map(m => `'${m}'`)
-          .join(',')} not found on dependencies`
-      )
-    })
-  }, TypeError)
-
-  t.is(error.message, "Uh, oh. 'one','two' not found on dependencies")
+  t.throws(
+    () => {
+      requireOneOf(['one', 'two'], modules => {
+        return new TypeError(
+          `Uh, oh. ${modules.map(m => `'${m}'`).join(',')} not found on dependencies`
+        )
+      })
+    },
+    {
+      instanceOf: TypeError,
+      message: "Uh, oh. 'one','two' not found on dependencies"
+    }
+  )
 })
 
 test('cache based on input', t => {
