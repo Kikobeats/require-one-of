@@ -1,10 +1,7 @@
 # require-one-of
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/require-one-of.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/Kikobeats/require-one-of/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/require-one-of)
 [![Coverage Status](https://img.shields.io/coveralls/Kikobeats/require-one-of.svg?style=flat-square)](https://coveralls.io/github/Kikobeats/require-one-of)
-[![Dependency status](https://img.shields.io/david/Kikobeats/require-one-of.svg?style=flat-square)](https://david-dm.org/Kikobeats/require-one-of)
-[![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/require-one-of.svg?style=flat-square)](https://david-dm.org/Kikobeats/require-one-of#info=devDependencies)
 [![NPM Status](https://img.shields.io/npm/dm/require-one-of.svg?style=flat-square)](https://www.npmjs.org/package/require-one-of)
 
 > Conditional require with fallback support. Minimal size (>700B), no dependencies.

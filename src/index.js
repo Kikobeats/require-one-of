@@ -6,13 +6,16 @@ const resolveFrom = require('resolve-from')
 const assert = require('assert')
 const path = require('path')
 
-const cache = {}
+const CACHE = Object.create(null)
 
 const createError = modules =>
   new TypeError(
-    `${humanizeList(modules.map(m => `'${m}'`), {
-      conjunction: 'or'
-    })} not found as dependency. Please, install one of them.`
+    `${humanizeList(
+      modules.map(m => `'${m}'`),
+      {
+        conjunction: 'or'
+      }
+    )} not found as dependency. Please, install one of them.`
   )
 
 const relativeNodeModulesPath = path.resolve(__dirname, '..', '..')
@@ -53,7 +56,7 @@ const find = (modules, error = createError) => {
 module.exports = (modules, fn) => {
   assert(Array.isArray(modules), 'Need to provide a collection')
   const key = modules.join(',')
-  return cache[key] || (cache[key] = find(modules, fn))
+  return CACHE[key] || (CACHE[key] = find(modules, fn))
 }
 
-module.exports.cache = cache
+module.exports.cache = CACHE
