@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.0.17 (2023-09-05)
+
 ### 1.0.16 (2022-06-12)
 
 ### [1.0.15](https://github.com/Kikobeats/require-one-of/compare/v1.0.14...v1.0.15) (2020-11-20)
