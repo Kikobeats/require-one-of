@@ -1,7 +1,7 @@
 {
   "name": "require-one-of",
   "description": "Conditional require with fallback support",
-  "homepage": "https://nicedoc.io/Kikobeats/require-one-of",
+  "homepage": "https://github.com/Kikobeats/require-one-of",
   "version": "1.0.16",
   "main": "src/index.js",
   "author": {
@@ -38,7 +38,7 @@
     "git-authors-cli": "latest",
     "nano-staged": "latest",
     "npm-check-updates": "latest",
-    "prettier-standard": "latest",
+    "@ksmithut/prettier-standard": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
@@ -73,8 +73,9 @@
     ]
   },
   "nano-staged": {
-    "*.js": [
-      "prettier-standard"
+    "*.js,!*.min.js,": [
+      "prettier-standard",
+      "standard --fix"
     ],
     "*.md": [
       "standard-markdown"
