@@ -23,7 +23,7 @@
     "require"
   ],
   "dependencies": {
-    "debug": "~4.3.1",
+    "debug": "~4.4.0",
     "humanize-list": "~1.0.1",
     "resolve-from": "~5.0.0"
   },
