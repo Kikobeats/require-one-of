@@ -1,12 +1,13 @@
 'use strict'
 
+const NullProtoObj = require('null-prototype-object')
 const debug = require('debug')('require-one-of')
 const humanizeList = require('humanize-list')
 const resolveFrom = require('resolve-from')
 const assert = require('assert')
 const path = require('path')
 
-const CACHE = Object.create(null)
+const CACHE = new NullProtoObj()
 
 const createError = modules =>
   new TypeError(
