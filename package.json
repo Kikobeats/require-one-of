@@ -1,6 +1,6 @@
 {
   "name": "require-one-of",
-  "description": "Conditional require with fallback support",
+  "description": "Require the first available module from a list of package names with graceful fallbacks.",
   "homepage": "https://github.com/Kikobeats/require-one-of",
   "version": "1.0.25",
   "main": "src/index.js",
@@ -19,9 +19,15 @@
   },
   "keywords": [
     "conditional",
-    "of",
-    "one",
-    "require"
+    "fallback",
+    "import",
+    "load",
+    "module",
+    "one-of",
+    "optional",
+    "peer",
+    "require",
+    "resolve"
   ],
   "dependencies": {
     "debug": "~4.4.0",
@@ -77,6 +83,7 @@
   },
   "nano-staged": {
     "*.js": [
+      "npx @kikobeats/prettier-standard",
       "standard --fix"
     ],
     "*.md": [
